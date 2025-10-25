@@ -1138,4 +1138,4 @@ html, body {
   height: 100vh;
   z-index: -1; /* This is crucial! It puts it behind all other content */
 }
-.header, .container, section, .project__card { position: relative; z-index: 1; }
+.site { position: relative; z-index: 1; padding: 32px; color: white; }
