@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="vanta-bg"></div>
     <!-- Navigation Header -->
     <header class="header">
         <nav class="nav container">
@@ -286,32 +285,6 @@
         </div>
     </footer>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.halo.min.js"></script>
-    
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Small delay to ensure everything is ready
-            setTimeout(function() {
-                if (typeof VANTA !== 'undefined') {
-                    VANTA.HALO({
-                        el: "#vanta-bg",
-                        mouseControls: true,
-                        touchControls: true,
-                        gyroControls: false,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        baseColor: 0xec4899,
-                        backgroundColor: 0x030712
-                    });
-                    console.log('Vanta.js background initialized successfully!');
-                } else {
-                    console.error('VANTA is not defined. Check if the library loaded correctly.');
-                }
-            }, 100);
-        });
-    </script>
     
     <script src="app.js"></script>
 </body>
