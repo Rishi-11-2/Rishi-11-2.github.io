@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div id="vanta-bg"></div>
     <!-- Navigation Header -->
     <header class="header">
         <nav class="nav container">
@@ -288,19 +288,17 @@
 
     <script src="app.js"></script>
     <script src="three.r134.min.js"></script>
-    <script src="vanta.net.min.js"></script>
+    <script src="vanta.halo.min.js"></script>
     <script>
-    VANTA.NET({
+    VANTA.HALO({
+    el: "#vanta-bg",
     mouseControls: true,
     touchControls: true,
     gyroControls: false,
     minHeight: 200.00,
-    minWidth: 200.00,
-    scale: 1.00,
-    scaleMobile: 1.00,
-    color: 0x3f4aff,
-    spacing: 13.00
+    minWidth: 200.00
     })
-</script>
+    </script>
+    
 </body>
 </html>
