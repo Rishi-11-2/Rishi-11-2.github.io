@@ -1127,6 +1127,9 @@ section:not(:last-child)::after {
     cursor: not-allowed;
     transform: none !important;
 }
+html, body {
+  background: transparent;   
+}
 #vanta-bg {
   position: fixed;
   top: 0;
