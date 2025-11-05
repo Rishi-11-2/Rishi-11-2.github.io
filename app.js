@@ -57,11 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(var(--color-surface), 0.95)';
-            header.style.backdropFilter = 'blur(20px)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.92)';
+            header.style.backdropFilter = 'blur(20px) saturate(180%)';
         } else {
-            header.style.backgroundColor = 'var(--color-surface)';
-            header.style.backdropFilter = 'blur(10px)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.85)';
+            header.style.backdropFilter = 'blur(20px) saturate(180%)';
         }
     });
 
@@ -418,7 +418,7 @@ document.head.appendChild(style);
 
     function calculateNumberOfParticles() {
         const area = window.innerWidth * window.innerHeight;
-        const density = 20000; // higher = fewer particles
+        const density = 11000; // higher = fewer particles
         return Math.max(50, Math.floor(area / density));
     }
 
