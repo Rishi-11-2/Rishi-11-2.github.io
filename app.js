@@ -57,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.92)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.12)';
             header.style.backdropFilter = 'blur(20px) saturate(180%)';
         } else {
-            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.85)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.06)';
             header.style.backdropFilter = 'blur(20px) saturate(180%)';
         }
     });

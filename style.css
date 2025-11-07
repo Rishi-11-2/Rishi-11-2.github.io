@@ -70,8 +70,8 @@
 
     /* Semantic Color Tokens (Dark Mode) */
     --color-background: var(--color-night-950);
-    --color-surface: rgba(var(--color-night-900-rgb), 0.85); /* Glassmorphism BG */
-    --color-surface-rgb: var(--color-night-900-rgb);
+    --color-surface-rgb: 255, 255, 255;
+    --color-surface: rgba(var(--color-surface-rgb), 0.06);
     --color-text: var(--color-gray-200);
     --color-text-secondary: rgba(var(--color-gray-200-rgb), 0.85);
     --color-primary: var(--color-cyan-500);
@@ -88,8 +88,8 @@
     --color-info: var(--color-gray-300);
     --color-focus-ring: rgba(var(--color-primary-rgb), 0.4);
     --color-btn-primary-text: var(--color-white); /* Text on pink buttons */
-    --color-card-border: rgba(var(--color-primary-rgb), 0.15); /* Glowing border */
-    --color-card-border-inner: rgba(var(--color-primary-rgb), 0.1);
+    --color-card-border: rgba(255, 255, 255, 0.08);
+    --color-card-border-inner: rgba(255, 255, 255, 0.06);
     --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
     --button-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
     --color-border-secondary: rgba(var(--color-gray-400-rgb), 0.2);
@@ -193,11 +193,7 @@
 body {
     position: relative;
     min-height: 100vh;
-    background:
-        radial-gradient(1200px 800px at 20% 10%, rgba(var(--color-cyan-600-rgb), 0.18), transparent 60%),
-        radial-gradient(1000px 600px at 80% 20%, rgba(var(--color-cyan-500-rgb), 0.16), transparent 55%),
-        radial-gradient(1000px 600px at 20% 80%, rgba(var(--color-cyan-400-rgb), 0.12), transparent 55%),
-        linear-gradient(180deg, #0A192F 0%, #0B1B3A 100%);
+    background: linear-gradient(135deg, #1B2735, #090A0F);
 }
 
 /* Make sure all sections are above the background */
@@ -432,9 +428,9 @@ textarea.form-control {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(var(--color-surface-rgb), 0.8);
+    background: rgba(var(--color-surface-rgb), 0.06);
     backdrop-filter: blur(20px) saturate(180%);
-    border-bottom: 1px solid rgba(var(--color-primary-rgb), 0.1); /* Subtle glow border */
+    border-bottom: 1px solid var(--color-card-border); /* Subtle glow border */
     z-index: 1000;
     transition: all var(--duration-normal) var(--ease-standard);
     box-shadow: 0 1px 20px rgba(0, 0, 0, 0.03);
@@ -518,9 +514,9 @@ textarea.form-control {
     max-width: 900px;
     padding: var(--space-48);
     animation: fadeInUp 0.8s ease-out 0.2s both;
-    background-color: rgba(var(--color-night-900-rgb), 0.35);
-    backdrop-filter: blur(4px) saturate(160%);
-    border: 1px solid rgba(var(--color-primary-rgb), 0.12);
+    background-color: var(--color-surface);
+    backdrop-filter: blur(16px) saturate(180%);
+    border: 1px solid var(--color-card-border);
     border-radius: var(--radius-lg);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
 }
