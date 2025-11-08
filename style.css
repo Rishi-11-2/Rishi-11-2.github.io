@@ -1,4 +1,5 @@
 :root {
+    color-scheme: light only;
     /* Primitive Color Tokens */
     --color-white: rgba(255, 255, 255, 1);
     --color-black: rgba(0, 0, 0, 1);
@@ -12,9 +13,9 @@
     --color-charcoal-800: rgba(38, 40, 40, 1); /* Kept for reference */
     --color-slate-900: rgba(19, 52, 59, 1);
 
-    /* --- LIGHT ORANGE AESTHETIC PRIMITIVES --- */
-    --color-light-bg: rgba(255, 245, 235, 1);      /* Light Orange Background */
-    --color-light-bg-rgb: 255, 245, 235;           /* Light Background RGB */
+    /* --- DARKER LIGHT ORANGE AESTHETIC PRIMITIVES --- */
+    --color-light-bg: rgba(255, 220, 180, 1);      /* Darker Light Orange Background */
+    --color-light-bg-rgb: 255, 220, 180;           /* Light Background RGB */
     /* Orange theme - Primary colors for light mode */
     --color-orange-300: rgba(255, 179, 102, 1);  /* Lighter Orange */
     --color-orange-400: rgba(255, 149, 51, 1);   /* Light Orange */
@@ -33,10 +34,8 @@
 
     --color-red-400: rgba(255, 84, 89, 1);
     --color-red-500: rgba(192, 21, 47, 1);
-    --color-orange-400: rgba(230, 129, 97, 1);
-    --color-orange-500: rgba(168, 75, 47, 1);
 
-    /* RGB versions for opacity control (Dark Mode) */
+    /* RGB versions for opacity control */
     --color-gray-400-rgb: 119, 124, 124;
     --color-gray-300-rgb: 167, 169, 169;
     --color-gray-200-rgb: 245, 245, 245;
@@ -194,12 +193,19 @@
     display: none;
 }
 
-/* Ensure content is above the background - Light Orange Theme */
+/* Force light mode on all devices */
+html {
+    color-scheme: light only;
+    -webkit-text-size-adjust: 100%;
+}
+
+/* Ensure content is above the background - Darker Light Orange Theme */
 body {
     position: relative;
     min-height: 100vh;
-    background: linear-gradient(135deg, #FFF5EB 0%, #FFE4CC 50%, #FFD9B3 100%);
+    background: linear-gradient(135deg, #FFD9B3 0%, #FFC999 50%, #FFB380 100%);
     background-attachment: fixed;
+    color-scheme: light;
 }
 
 /* Make sure all sections are above the background */
