@@ -53,15 +53,17 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollTimeout = setTimeout(highlightActiveNavLink, 10);
     });
 
-    // Header background on scroll
+    // Header background on scroll - Light orange glassmorphism theme
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
-            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.12)';
-            header.style.backdropFilter = 'blur(20px) saturate(180%)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.85)';
+            header.style.backdropFilter = 'blur(24px) saturate(180%)';
+            header.style.boxShadow = '0 2px 20px rgba(var(--color-orange-500-rgb), 0.12), 0 1px 4px rgba(0, 0, 0, 0.08)';
         } else {
-            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.06)';
+            header.style.backgroundColor = 'rgba(var(--color-surface-rgb), 0.7)';
             header.style.backdropFilter = 'blur(20px) saturate(180%)';
+            header.style.boxShadow = '0 2px 20px rgba(var(--color-orange-500-rgb), 0.08), 0 1px 3px rgba(0, 0, 0, 0.05)';
         }
     });
 
