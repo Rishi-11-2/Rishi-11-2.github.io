@@ -273,6 +273,13 @@ ul {
     font-weight: 300;
 }
 
+.hero__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 /* Sections Common */
 section {
     padding: 100px 0;
@@ -502,6 +509,180 @@ section {
     display: flex;
     gap: 20px;
     justify-content: center;
+}
+
+/* Timeline */
+.timeline {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 20px;
+    /* Add some padding to the container */
+}
+
+.timeline__item {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 0;
+    /* Remove padding from container */
+    margin-bottom: 0;
+    position: relative;
+    align-items: stretch;
+    /* Ensure marker stretches to full height */
+}
+
+.timeline__content {
+    flex-grow: 1;
+    padding-bottom: 50px;
+    /* Move padding here so line extends */
+}
+
+.timeline__item:last-child .timeline__content {
+    padding-bottom: 0;
+}
+
+.timeline__marker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24px;
+    /* Slightly wider for larger dots */
+    flex-shrink: 0;
+    position: relative;
+}
+
+.timeline__dot {
+    width: 18px;
+    height: 18px;
+    background: var(--color-bg-dark);
+    /* Opaque background to hide line */
+    border: 3px solid var(--color-primary);
+    border-radius: 50%;
+    box-shadow:
+        0 0 10px var(--color-primary-glow),
+        inset 0 0 5px var(--color-primary-glow);
+    z-index: 2;
+    margin-top: 5px;
+    position: relative;
+    transition: all 0.3s ease;
+    animation: pulse-dot 3s infinite ease-in-out;
+}
+
+.timeline__item:hover .timeline__dot {
+    background: var(--color-primary);
+    box-shadow:
+        0 0 20px var(--color-primary-glow),
+        0 0 30px rgba(255, 122, 0, 0.6);
+    transform: scale(1.2);
+}
+
+@keyframes pulse-dot {
+
+    0%,
+    100% {
+        box-shadow:
+            0 0 10px var(--color-primary-glow),
+            inset 0 0 5px var(--color-primary-glow);
+    }
+
+    50% {
+        box-shadow:
+            0 0 20px var(--color-primary-glow),
+            inset 0 0 10px var(--color-primary-glow);
+    }
+}
+
+.timeline__line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    background: linear-gradient(to bottom,
+            var(--color-primary),
+            rgba(255, 122, 0, 0.7));
+    box-shadow:
+        0 0 8px rgba(255, 122, 0, 0.4),
+        0 0 4px rgba(255, 122, 0, 0.2);
+    z-index: 1;
+    border-radius: 2px;
+}
+
+/* First item: start line at dot */
+.timeline__item:first-child .timeline__line {
+    top: 24px;
+    /* Start below the first dot */
+}
+
+/* Last item: fade out */
+.timeline__item:last-child .timeline__line {
+    display: block;
+    background: linear-gradient(to bottom,
+            var(--color-primary),
+            rgba(255, 122, 0, 0.5),
+            transparent);
+    box-shadow: none;
+    /* Remove shadow as it fades */
+}
+
+.timeline__content {
+    flex-grow: 1;
+    padding-bottom: 10px;
+}
+
+.timeline__header {
+    margin-bottom: 10px;
+}
+
+.timeline__title {
+    font-size: 1.2rem;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.timeline__company {
+    display: block;
+    font-size: 1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.timeline__date {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    font-family: var(--font-mono);
+}
+
+.timeline__desc {
+    color: #ccc;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.timeline__desc li {
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 15px;
+}
+
+.timeline__desc li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 0;
+    }
+
+    .timeline__item {
+        gap: 15px;
+    }
 }
 
 /* Contact Section */
