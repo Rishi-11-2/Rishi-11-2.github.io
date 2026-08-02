@@ -1,30 +1,30 @@
 :root {
     color-scheme: dark;
 
-    /* --- PREMIUM DARK ORANGE PALETTE --- */
+    /* --- PREMIUM GLASS BLUE PALETTE --- */
     /* Backgrounds */
-    --color-bg-dark: #050505;
-    --color-bg-card: rgba(20, 20, 20, 0.6);
+    --color-bg-dark: #030712;
+    --color-bg-card: rgba(15, 23, 42, 0.6);
     --color-bg-glass: rgba(255, 255, 255, 0.03);
 
-    /* Primary Orange Accents */
-    --color-primary: #FF5500;
-    /* Vibrant Neon Orange */
-    --color-primary-rgb: 255, 85, 0;
-    --color-primary-hover: #FF7700;
-    --color-primary-glow: rgba(255, 85, 0, 0.5);
+    /* Primary Glass Blue Accents */
+    --color-primary: #3B82F6;
+    /* Elegant Glass Blue */
+    --color-primary-rgb: 59, 130, 246;
+    --color-primary-hover: #60A5FA;
+    --color-primary-glow: rgba(59, 130, 246, 0.5);
 
     /* Secondary/Text */
-    --color-text-main: #FFFFFF;
-    --color-text-muted: #A0A0A0;
-    --color-border: rgba(255, 255, 255, 0.1);
-    --color-border-highlight: rgba(255, 85, 0, 0.3);
+    --color-text-main: #F1F5F9;
+    --color-text-muted: #94A3B8;
+    --color-border: rgba(148, 163, 184, 0.12);
+    --color-border-highlight: rgba(59, 130, 246, 0.3);
 
     /* Glassmorphism Tokens */
-    --glass-bg: rgba(10, 10, 10, 0.7);
-    --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    --backdrop-blur: blur(12px);
+    --glass-bg: rgba(15, 23, 42, 0.65);
+    --glass-border: 1px solid rgba(148, 163, 184, 0.1);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    --backdrop-blur: blur(14px);
 
     /* Spacing & Layout */
     --container-width: 1200px;
@@ -38,11 +38,11 @@
     --font-mono: 'Fira Code', monospace;
 
     /* Functional Colors (for JS) */
-    --color-success: #00ff88;
-    --color-success-rgb: 0, 255, 136;
-    --color-error: #ff3333;
-    --color-error-rgb: 255, 51, 51;
-    --color-surface-rgb: 10, 10, 10;
+    --color-success: #34D399;
+    --color-success-rgb: 52, 211, 153;
+    --color-error: #F87171;
+    --color-error-rgb: 248, 113, 113;
+    --color-surface-rgb: 15, 23, 42;
     /* Dark surface for JS fallback */
 }
 
@@ -64,7 +64,7 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
     /* Subtle background gradient for depth */
-    background: radial-gradient(circle at 50% 0%, #1a0a00 0%, #050505 60%);
+    background: radial-gradient(circle at 50% 0%, #0c1a3a 0%, #030712 60%);
 }
 
 /* Typography Defaults */
@@ -97,7 +97,7 @@ ul {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #FF5500, #FF9900);
+    background: linear-gradient(135deg, #3B82F6, #7DD3FC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -134,7 +134,7 @@ ul {
 }
 
 .btn--primary {
-    background: linear-gradient(135deg, var(--color-primary), #FF3300);
+    background: linear-gradient(135deg, var(--color-primary), #2563EB);
     color: white;
     box-shadow: 0 4px 15px var(--color-primary-glow);
 }
@@ -171,9 +171,9 @@ ul {
     right: 0;
     height: var(--header-height);
     z-index: 1000;
-    background: rgba(5, 5, 5, 0.8);
+    background: rgba(3, 7, 18, 0.85);
     backdrop-filter: blur(16px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.08);
     transition: all 0.3s ease;
 }
 
@@ -248,7 +248,7 @@ ul {
     transform: translate(-50%, -50%);
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(255, 85, 0, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
     z-index: -1;
     filter: blur(60px);
 }
@@ -320,7 +320,7 @@ section {
     border-radius: 50%;
     overflow: hidden;
     border: 2px solid var(--color-primary);
-    box-shadow: 0 0 30px rgba(255, 85, 0, 0.2);
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.2);
     position: relative;
 }
 
@@ -390,9 +390,9 @@ section {
     font-size: 0.75rem;
     padding: 4px 10px;
     border-radius: 20px;
-    background: rgba(255, 85, 0, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     color: var(--color-primary);
-    border: 1px solid rgba(255, 85, 0, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.2);
 }
 
 .project__links {
@@ -417,7 +417,7 @@ section {
 
 .skill__category:hover {
     transform: translateY(-5px);
-    border-color: rgba(255, 85, 0, 0.3);
+    border-color: rgba(59, 130, 246, 0.3);
 }
 
 .skill__title {
@@ -447,7 +447,7 @@ section {
 .skill-tag:hover {
     border-color: var(--color-primary);
     color: white;
-    background: rgba(255, 85, 0, 0.1);
+    background: rgba(59, 130, 246, 0.1);
 }
 
 /* Coding Platforms */
@@ -572,7 +572,7 @@ section {
     background: var(--color-primary);
     box-shadow:
         0 0 20px var(--color-primary-glow),
-        0 0 30px rgba(255, 122, 0, 0.6);
+        0 0 30px rgba(59, 130, 246, 0.6);
     transform: scale(1.2);
 }
 
@@ -601,10 +601,10 @@ section {
     width: 3px;
     background: linear-gradient(to bottom,
             var(--color-primary),
-            rgba(255, 122, 0, 0.7));
+            rgba(59, 130, 246, 0.7));
     box-shadow:
-        0 0 8px rgba(255, 122, 0, 0.4),
-        0 0 4px rgba(255, 122, 0, 0.2);
+        0 0 8px rgba(59, 130, 246, 0.4),
+        0 0 4px rgba(59, 130, 246, 0.2);
     z-index: 1;
     border-radius: 2px;
 }
@@ -620,7 +620,7 @@ section {
     display: block;
     background: linear-gradient(to bottom,
             var(--color-primary),
-            rgba(255, 122, 0, 0.5),
+            rgba(59, 130, 246, 0.5),
             transparent);
     box-shadow: none;
     /* Remove shadow as it fades */
@@ -758,7 +758,7 @@ section {
 .form-control:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.1);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
     background: rgba(0, 0, 0, 0.5);
 }
 
