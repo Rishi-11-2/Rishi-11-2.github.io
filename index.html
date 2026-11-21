@@ -4,8 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="dark">
-    <title>Rishi Chowdhury - Portfolio</title>
+    <meta name="color-scheme" content="light dark">
+    <meta name="description" content="Rishi Chowdhury, software engineer at Samsung Research working on machine learning systems.">
+    <title>Rishi Chowdhury | Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Instrument+Serif&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,7 +20,8 @@
             <div class="nav__logo">
                 <h3>Rishi Chowdhury</h3>
             </div>
-            <ul class="nav__menu">
+            <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
+            <ul class="nav__menu" id="menu">
                 <li><a href="#about" class="nav__link">About</a></li>
                 <li><a href="#experience" class="nav__link">Experience</a></li>
 
@@ -32,35 +37,30 @@
     <section class="hero">
         <div class="container">
             <div class="hero__content">
-                <h1 class="hero__title text-gradient">Rishi Chowdhury</h1>
-                <p class="hero__subtitle">Software Engineer At Samsung Research</p>
+                <h1 class="hero__title">Rishi Chowdhury</h1>
+                <p class="hero__subtitle">Software engineer at Samsung Research</p>
+                <p class="hero__lede">I build machine learning systems for retrieval, language understanding and developer tooling.</p>
                 <div class="hero__actions">
-                    <a href="#about" class="btn btn--primary hero__cta">Get to know me</a>
-                    <a href="https://drive.google.com/file/d/1YsBjHwxQFn16u3e3MBMk6aJJSGUqjvp5/view?usp=drive_linkz"
-                        target="_blank" rel="noopener noreferrer" class="btn btn--outline">View Resume</a>
+                    <a href="https://drive.google.com/file/d/1YsBjHwxQFn16u3e3MBMk6aJJSGUqjvp5/view?usp=drive_link"
+                        target="_blank" rel="noopener noreferrer" class="btn btn--primary">View resume</a>
                     <a href="https://drive.google.com/uc?export=download&id=1YsBjHwxQFn16u3e3MBMk6aJJSGUqjvp5"
-                        class="btn btn--outline">Download Resume</a>
+                        class="btn btn--outline">Download resume</a>
                 </div>
             </div>
+            <div class="hero__portrait"><img src="https://res.cloudinary.com/dxg80ovm0/image/upload/v1754146917/IMG-20241204-WA0007_qbdrbj.jpg"
+                            alt="Rishi Chowdhury" fetchpriority="high"></div>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section__title">About Me</h2>
+            <h2 class="section__title">About</h2>
             <div class="about__content">
-                <div class="about__image">
-                    <div class="avatar">
-                        <img src="https://res.cloudinary.com/dxg80ovm0/image/upload/v1754146917/IMG-20241204-WA0007_qbdrbj.jpg"
-                            alt="Rishi Chowdhury" class="avatar__img">
-                    </div>
-
-                </div>
                 <div class="about__text">
                     <p class="about__bio">
-                        Passionate Software Engineer currently working in Samsung Research . I am interested in Machine
-                        Learning and Deep Learning and have a know-how of LLMs work under the hood
+                        Software engineer at Samsung Research. I am interested in Machine
+                        Learning and Deep Learning and understand how LLMs work under the hood
                     </p>
                 </div>
             </div>
@@ -185,8 +185,6 @@
                         <div class="project__links">
                             <a href="https://github.com/Rishi-11-2/Agentic_Memory" target="_blank" rel="noopener noreferrer"
                                 class="btn btn--outline btn--sm">GitHub</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live
-                                Demo</a>
                         </div>
                     </div>
                 </div>
@@ -236,7 +234,7 @@
                     <div class="skill__tags">
                         <span class="skill-tag">Deep Learning</span>
                         <span class="skill-tag">5G Protocols</span>
-                        <span class="skill-tag">Competitive Programming</span>
+                        <span class="skill-tag">Competitive programming</span>
                     </div>
                 </div>
             </div>
@@ -344,13 +342,13 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section__title">Get In Touch</h2>
+            <h2 class="section__title">Contact</h2>
             <div class="contact__content">
                 <div class="contact__info">
                     <h3>Let's work together</h3>
                     <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
                     <div class="contact__details">
-                        <p class="contact__email">📧 rishichowdhury711@gmail.com</p>
+                        <p class="contact__email"><a href="mailto:rishichowdhury711@gmail.com">rishichowdhury711@gmail.com</a></p>
                         <div class="social__links">
                             <a href="https://www.linkedin.com/in/rishi-chowdhury711/" target="_blank"
                                 rel="noopener noreferrer" class="social__link">LinkedIn</a>
