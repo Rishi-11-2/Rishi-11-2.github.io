@@ -84,10 +84,11 @@
                             <span class="timeline__date">July 2025 - Present</span>
                         </div>
                         <ul class="timeline__desc">
-                            <li>Working on Bixby (Language AI).</li>
-                            <li>Built a knowledge distillation pipeline (Transformer → 3-layer MLP) and deployed the student MLP for ACK/NACK prediction in 5G systems, delivering a 5% gain in downlink throughput in production.</li>
+                            <li>Fine-tuned a cross-encoder reranker to re-score retrieved candidates in Samsung's customer-care troubleshooting RAG pipeline, reaching 97% accuracy on a held-out evaluation set.</li>
+                            <li>Adapted a compact MiniLM-L6 encoder into a single- vs. multi-intent query classifier, reaching 90% accuracy on the test set; exported to ONNX for low-latency inference and deployed in production.</li>
+                            <li>Designed and deployed a low-latency 3-layer MLP for ACK/NACK classification, driving a 5% increase in effective downlink throughput.</li>
+                            <li>Engineered an autonomous Testing Agent leveraging self-correcting feedback pipelines to perform integration testing across new and existing algorithmic features, reducing test cycle time by 50%.</li>
                             <li>Designed a root-cause analysis skill that pinpoints the Perforce changelist that introduced or resolved a bug, combining deterministic scoring with tightly bounded AI reasoning to produce reproducible, confidence-rated results while avoiding false positives.</li>
-                            <li>Built a closed-loop testing agent that triggers integration tests on every incoming feature, evaluates failures, and automatically corrects the broken tests , iterating until the all testcases pass.</li>
                             <li>Built a log analysis and visualization tool that parses structured protocol logs and renders interactive time-frequency resource grids with slot-level and frame-level views, reducing debugging turnaround for engineering teams.</li>
                         </ul>
                     </div>
